@@ -26,10 +26,27 @@
       </div>
     </nav>
     <div class="container">
-      <h1 itemprop=name>Hello, world!</h1>
+      <h1 itemprop=name>
+        <span class="en">Hello World!</span>
+        <span class="hi hidden">अक्षयनिधि राठौर का आपराधिक इतिहास</span>
+      </h1>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      $('input[type=radio][name="lang-selector"]').on('change', function() {
+        window.alert(this.id);
+        const englishTexts = document.querySelectorAll('.en');
+        const hindiTexts = document.querySelectorAll('.hi');
+        const isEnglish = this.id === 'english'; // englishTexts[0].style.display !== 'none';
+        if (isEnglish) {
+          englishTexts.forEach(el => el.classList.add('hidden'));
+          hindiTexts.forEach(el => el.classList.remove('hidden'));
+        } else {
+          englishTexts.forEach(el => el.classList.remove('hidden'));
+          hindiTexts.forEach(el => el.classList.add('hidden'));
+        }
+      });
+    </script>
   </body>
 </html>
