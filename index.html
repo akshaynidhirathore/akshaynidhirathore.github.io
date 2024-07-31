@@ -19,9 +19,9 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
         <div class="w-100 text-end" id="navbarNav">
-          <input type="radio" class="btn-check" name="lang-selector" id="english" autocomplete="off" checked>
+          <input type="radio" class="btn-check" name="lang-selector" id="english" autocomplete="off" value="en" checked>
           <label class="btn btn-sm" for="english">English</label>
-          <input type="radio" class="btn-check" name="lang-selector" id="hindi" autocomplete="off">
+          <input type="radio" class="btn-check" name="lang-selector" id="hindi" autocomplete="off" value="hi">
           <label class="btn btn-sm" for="hindi">हिंदी</label>
         </div>
       </div>
@@ -162,10 +162,18 @@
             </h2>
             <p>
               <span class="en">
-                
+                Akshay's uncle, Thakur Kuldeep Singh Rathore, passed away in 2020 without any children. Since he did not have a will, his property was to be inherited by his three sisters according to Hindu Undivided Family (HUF) law. Akshay and his mother saw this as another opportunity and attempted to defraud his aunts of their inheritance.
               </span>
               <span class="hi" hidden>
-                
+                अक्षय के चाचा, ठाकुर कुलदीप सिंह राठौर का 2020 में निधन हो गया, उनकी कोई संतान नहीं थी। चूँकि उनके पास कोई वसीयत नहीं थी, इसलिए हिंदू अविभाजित परिवार (HUF) कानून के अनुसार उनकी संपत्ति उनकी तीन बहनों को विरासत में मिलनी थी। अक्षय और उनकी माँ ने इसे एक और अवसर के रूप में देखा और अपनी मौसी को उनकी विरासत से वंचित करने का प्रयास किया।
+              </span>
+            </p>
+            <p>
+              <span class="en">
+                Akshay and his mother forged a will for Kuldeep Singh Rathore after his death in 2020 and managed to get it registered. They forged signatures on the will, leading his aunts to file a lawsuit in the district court of Fatehabad, Haryana under sections 420/467/468/471/506/120B of IPC. The case is still ongoing, they are out on bail, and face potential conviction for forgery and fraud.
+              </span>
+              <span class="hi" hidden>
+                अक्षय और उसकी माँ ने 2020 में कुलदीप सिंह राठौर की मृत्यु के बाद उनकी वसीयत में जालसाजी की और उसे पंजीकृत करवा लिया। उन्होंने वसीयत पर जाली हस्ताक्षर किए, जिसके कारण उनकी भुआओं ने हरियाणा के फतेहाबाद की जिला अदालत में IPC की धारा 420/467/468/471/506/120B के तहत मुकदमा दायर किया। मामला अभी भी चल रहा है, वे जमानत पर बाहर हैं, और जालसाजी और धोखाधड़ी के लिए संभावित सजा का सामना कर रहे हैं।
               </span>
             </p>
             <h6>
@@ -175,38 +183,17 @@
             <p>
               <ul class="list-group">
                 <li class="list-group-item">
-                  <i class="fa-regular fa-file-image"></i>
-                  <a href="i/HDFC-Deposit-Slip.jpg" target="_blank">
-                    <span class="en">Copy of deposit slip in the name of Akshay</span>
-                    <span class="hi" hidden>अक्षय के नाम जमा पर्ची की प्रति</span>
-                  </a>
-                </li>
-                <li class="list-group-item">
-                  <i class="fa-regular fa-file-image"></i>
-                  <a href="i/HDFC-Bank-Statement.png" target="_blank">
-                    <span class="en">Copy of Abhinay's HDFC Bank statement</span>
-                    <span class="hi" hidden>अभिनय के HDFC बैंक स्टेटमेंट की प्रति</span>
+                  <i class="fa-regular fa-file-pdf"></i>
+                  <a href="i/Dhingsara-Forgery-Case.pdf" target="_blank">
+                    <span class="en">Copy of the case and chargesheet</span>
+                    <span class="hi" hidden>मामले और आरोपपत्र की प्रति</span>
                   </a>
                 </li>
                 <li class="list-group-item">
                   <i class="fa-regular fa-file-pdf"></i>
-                  <a href="i/Fraud-Sale-Deed.pdf" target="_blank">
-                    <span class="en">Copy of fraud land sale deed</span>
-                    <span class="hi" hidden>धोखाधड़ी बिक्री विलेख की प्रतिलिपि</span>
-                  </a>
-                </li>
-                <li class="list-group-item">
-                  <i class="fa-regular fa-file-pdf"></i>
-                  <a href="i/Fraud-Final-Verdict.pdf" target="_blank">
-                    <span class="en">Final verdict for the case (CNR No.HRSI-0300-2353-2012)</span>
-                    <span class="hi" hidden>मामले का अंतिम फैसला (CNR No.HRSI-0300-2353-2012)</span>
-                  </a>
-                </li>
-                <li class="list-group-item">
-                  <i class="fa-regular fa-file-pdf"></i>
-                  <a href="i/Fraud-Final-Verdict-Sentence.pdf" target="_blank">
-                    <span class="en">Final sentencing for the case (CNR No.HRSI-0300-2353-2012)</span>
-                    <span class="hi" hidden>मामले में अंतिम सजा (CNR No.HRSI-0300-2353-2012)</span>
+                  <a href="i/Dhingsara-Forensic-Report-Original.pdf" target="_blank">
+                    <span class="en">Forensic lab report on forged signature</span>
+                    <span class="hi" hidden>जाली हस्ताक्षर पर फोरेंसिक लैब की रिपोर्ट</span>
                   </a>
                 </li>
               </ul>
@@ -225,6 +212,12 @@
         $englishTexts.prop('hidden', !isEnglish);
         $hindiTexts.prop('hidden', isEnglish);
       });
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('lang') === 'en') {
+        $('input[type=radio][value="en"]').prop('checked', true);
+      } else {
+        $('input[type=radio][value="hi"]').prop('checked', true);
+      }
     </script>
   </body>
 </html>
