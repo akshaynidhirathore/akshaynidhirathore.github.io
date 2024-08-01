@@ -200,24 +200,39 @@
             </p>
           </div>
         </div>
+        <div class="row">
+          <div class="col">
+            <h2>
+              <span class="en">In conclusion</span>
+              <span class="hi" hidden>निष्कर्ष के तौर पर</span>
+            </h2>
+            <p>
+              <span class="en">
+                Due to the repeated fraudulent activities of Akshay and his mother Nisha Rathore, including financial fraud and forgery, the family have decided to sever all personal and professional ties with them. To safeguard the integrity and avoid any potential legal or reputational harm, the family have ceased all forms of communication, withdrawn from any joint ventures or business dealings, and informed relevant parties of their decision to disassociate. Caution for others to exercise extreme vigilance and avoid engaging with these individuals, as their fraudulent behavior poses significant risks and could result in serious consequences.
+              </span>
+              <span class="hi" hidden>
+                अक्षय और उनकी मां निशा राठौर की वित्तीय धोखाधड़ी और जालसाजी सहित बार-बार की गई धोखाधड़ी गतिविधियों के कारण, परिवार ने उनके साथ सभी व्यक्तिगत और व्यावसायिक संबंध तोड़ने का फैसला किया है। अखंडता की रक्षा करने और किसी भी संभावित कानूनी या प्रतिष्ठा संबंधी नुकसान से बचने के लिए, परिवार ने सभी प्रकार के संचार बंद कर दिए हैं, किसी भी संयुक्त उद्यम या व्यावसायिक सौदे से खुद को अलग कर लिया है, और संबंधित पक्षों को अपने अलग होने के फैसले के बारे में सूचित कर दिया है। दूसरों के लिए सावधानी बरतें कि वे अत्यधिक सतर्कता बरतें और इन व्यक्तियों के साथ जुड़ने से बचें, क्योंकि उनके धोखाधड़ी वाले व्यवहार से बहुत जोखिम होता है और इसके गंभीर परिणाम हो सकते हैं।
+              </span>
+            </p>
+          </div>
+        </div>
       </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript">
-      $('input[type=radio][name="lang-selector"]').on('change', function() {
-        const isEnglish = this.id === 'english';
+      function setanguage(isEnglish){
         const $englishTexts = $('.en');
         const $hindiTexts = $('.hi'); 
         $englishTexts.prop('hidden', !isEnglish);
         $hindiTexts.prop('hidden', isEnglish);
+      }
+      $('input[type=radio][name="lang-selector"]').on('change', function() {
+        const isEnglish = this.id === 'english';
+        setanguage(isEnglish);
       });
       const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('lang') === 'en') {
-        $('input[type=radio][value="en"]').trigger("click");
-      } else {
-        $('input[type=radio][value="hi"]').trigger("click");
-      }
+      setanguage(urlParams.get('lang') === 'en');
     </script>
   </body>
 </html>
