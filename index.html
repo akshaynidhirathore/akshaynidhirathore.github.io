@@ -176,10 +176,10 @@
                 अक्षय और उसकी माँ ने 2020 में कुलदीप सिंह राठौर की मृत्यु के बाद उनकी वसीयत में जालसाजी की और उसे पंजीकृत करवा लिया। उन्होंने वसीयत पर जाली हस्ताक्षर किए, जिसके कारण उनकी भुआओं ने हरियाणा के फतेहाबाद की जिला अदालत में IPC की धारा 420/467/468/471/506/120B के तहत मुकदमा दायर किया। मामला अभी भी चल रहा है, वे जमानत पर बाहर हैं, और जालसाजी और धोखाधड़ी के लिए संभावित सजा का सामना कर रहे हैं।
               </span>
             </p>
-            <h6>
+            <h5>
               <span class="en">Document proof for the fraud:</span>
               <span class="hi" hidden>धोखाधड़ी के लिए दस्तावेज़ प्रमाण:</span>
-            </h6>
+            </h5>
             <p>
               <ul class="list-group">
                 <li class="list-group-item">
@@ -214,9 +214,9 @@
       });
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('lang') === 'en') {
-        $('input[type=radio][value="en"]').prop('checked', true);
+        $('input[type=radio][value="en"]').trigger("click");
       } else {
-        $('input[type=radio][value="hi"]').prop('checked', true);
+        $('input[type=radio][value="hi"]').trigger("click");
       }
     </script>
   </body>
