@@ -52,7 +52,7 @@
                 Akshaynidhi completed his schooling at BRCM Public School in Bahal (now closed), attending until the 10th grade. He struggled academically, <a href="i/Akshay-10th-Marksheet.jpg" target="_blank">failing the 10th grade twice</a>. Subsequently, he gained admission to college using fraudulent credentials but ultimately did not earn any degree.
               </span>
               <span class="hi" hidden>
-                अक्षयनिधि ने अपनी स्कूली शिक्षा बहल (अब बंद) के बीआरसीएम पब्लिक स्कूल से पूरी की, जहाँ उन्होंने 10वीं कक्षा तक पढ़ाई की। उन्हें पढ़ाई में दिक्कत हुई, वे <a href="i/Akshay-10th-Marksheet.jpg" target="_blank">f10वीं कक्षा में दो बार फेल हो गए</a>। इसके बाद, उन्होंने फर्जी प्रमाण-पत्रों का उपयोग करके कॉलेज में प्रवेश प्राप्त किया, लेकिन अंततः उन्हें कोई डिग्री नहीं मिली।
+                अक्षयनिधि ने अपनी स्कूली शिक्षा बहल (अब बंद) के बीआरसीएम पब्लिक स्कूल से पूरी की, जहाँ उन्होंने 10वीं कक्षा तक पढ़ाई की। उन्हें पढ़ाई में दिक्कत हुई, वे <a href="i/Akshay-10th-Marksheet.jpg" target="_blank">10वीं कक्षा में दो बार फेल हो गए</a>। इसके बाद, उन्होंने फर्जी प्रमाण-पत्रों का उपयोग करके कॉलेज में प्रवेश प्राप्त किया, लेकिन अंततः उन्हें कोई डिग्री नहीं मिली।
               </span>
             </p>
           </div>
@@ -226,6 +226,8 @@
         const $hindiTexts = $('.hi'); 
         $englishTexts.prop('hidden', !isEnglish);
         $hindiTexts.prop('hidden', isEnglish);
+        $('#english').prop('checked', isEnglish);
+        $('#hindi').prop('checked', !isEnglish);
       }
       $('input[type=radio][name="lang-selector"]').on('change', function() {
         const isEnglish = this.id === 'english';
