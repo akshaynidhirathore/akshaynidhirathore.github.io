@@ -228,6 +228,7 @@
         $hindiTexts.prop('hidden', isEnglish);
         $('#english').prop('checked', isEnglish);
         $('#hindi').prop('checked', !isEnglish);
+        window.history.replaceState(null, null, "?lang=" + (isEnglish ? 'en' : 'hi'));
       }
       $('input[type=radio][name="lang-selector"]').on('change', function() {
         const isEnglish = this.id === 'english';
