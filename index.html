@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="hi">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Akshaynidhi Rathore's Criminal History</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💩</text></svg>">
+    <link rel=canonical href="https://akshaynidhirathore.github.io/?lang=en">
     <meta name=keywords content="akshaynidhi, akshay nidhi, rathore, nisha rathore, criminal, bajekan, dhingsara, sirsa" />
     <meta name=Description content="Criminal history and misdeeds of a convicted felon Akshaynidhi Rathore of Bajekan, Sirsa." />
     <meta property="og:title" content="Akshaynidhi Rathore's Criminal History" />
@@ -33,6 +34,16 @@
       </h1>
       <main>
         <div class="row">
+          <div class="col">
+            <div class="alert alert-secondary" role="alert">
+              <span class="en">
+                All content on this website is supported by appropriate evidence. While we aim for accuracy, the information is for informational purposes only and may not be complete.
+              </span>
+              <span class="hi" hidden>
+                इस वेबसाइट पर सभी सामग्री उचित साक्ष्य द्वारा समर्थित है। हालाँकि हमारा उद्देश्य सटीकता है, लेकिन जानकारी केवल सूचनात्मक उद्देश्यों के लिए है और पूरी नहीं हो सकती है।
+              </span>
+            </div>
+          </div>
           <div class="col">
             <h2>
               <span class="en">Introduction</span>
@@ -242,13 +253,15 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript">
       function setanguage(isEnglish){
+        const locale = isEnglish ? 'en' : 'hi';
         const $englishTexts = $('.en');
         const $hindiTexts = $('.hi'); 
         $englishTexts.prop('hidden', !isEnglish);
         $hindiTexts.prop('hidden', isEnglish);
         $('#english').prop('checked', isEnglish);
         $('#hindi').prop('checked', !isEnglish);
-        window.history.replaceState(null, null, "?lang=" + (isEnglish ? 'en' : 'hi'));
+        window.history.replaceState(null, null, "?lang=" + locale);
+        $('html').attr('lang', locale);
       }
       $('input[type=radio][name="lang-selector"]').on('change', function() {
         const isEnglish = this.id === 'english';
